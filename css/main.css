@@ -18,12 +18,6 @@ body {
     background-color: transparent;
     padding: 20px 0;
     z-index: 1000;
-    transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -37,15 +31,10 @@ body {
 
 .nav-logo a {
     text-decoration: none;
-    color: white;
+    color: #000;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
-
-.navbar.scrolled .nav-logo a {
-    color: #333;
 }
 
 .nav-links {
@@ -56,20 +45,12 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: white;
+    color: #000;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.navbar.scrolled .nav-link {
-    color: #333;
-}
-
-.navbar.scrolled .nav-link:hover {
     color: #666;
 }
 
@@ -92,61 +73,37 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s ease;
 }
 
-.navbar.scrolled .nav-button img {
-    filter: none;
-}
-
-.hero {
-    position: relative;
+.hero-video-section {
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
 .hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: filter 0.5s ease;
-}
-
-.hero-video.scrolled {
-    filter: grayscale(100%) brightness(0.5);
-}
-
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.5s ease;
-    pointer-events: none;
-}
-
-.video-overlay.active {
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .about-section {
-    position: relative;
+    background-color: #ffffff;
     min-height: 100vh;
-    background-color: white;
-    z-index: 10;
+    padding: 100px 40px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 80px 40px;
 }
 
 .about-content h1 {
@@ -158,4 +115,11 @@ body {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 20px;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
