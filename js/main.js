@@ -1,28 +1,45 @@
 // Main JavaScript - ES6 Module
 
-function initScrollAnimation() {
-    const aboutSection = document.querySelector('.about-section');
+function initTypingAnimation() {
+    const aboutText = document.querySelector('.about-text');
     
-    if (!aboutSection) return;
+    if (!aboutText) return;
     
-    // Create Intersection Observer to detect when About Me enters viewport
+    const fullText = aboutText.textContent;
+    aboutText.textContent = '';
+    
+    let charIndex = 0;
+    let hasStarted = false;
+    
+    function typeCharacter() {
+        if (charIndex < fullText.length) {
+            aboutText.textContent += fullText.charAt(charIndex);
+            charIndex++;
+            setTimeout(typeCharacter, 80);
+        }
+    }
+    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+            if (entry.isIntersecting && !hasStarted) {
+                hasStarted = true;
+                typeCharacter();
+                observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.2,
-        rootMargin: '0px'
+        threshold: 0.5
     });
     
-    observer.observe(aboutSection);
+    const aboutSection = document.querySelector('.about-section');
+    if (aboutSection) {
+        observer.observe(aboutSection);
+    }
 }
 
 function init() {
     console.log('Portfolio initialized');
-    initScrollAnimation();
+    initTypingAnimation();
 }
 
 document.addEventListener('DOMContentLoaded', init);

@@ -31,7 +31,7 @@ body {
 
 .nav-logo a {
     text-decoration: none;
-    color: #000;
+    color: white;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -45,13 +45,13 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #000;
+    color: white;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #666;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .nav-button {
@@ -73,6 +73,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+    filter: brightness(0) invert(1);
 }
 
 .hero-video-section {
@@ -88,38 +89,45 @@ body {
 }
 
 .about-section {
-    background-color: #ffffff;
+    position: relative;
+    width: 100%;
     min-height: 100vh;
-    padding: 100px 40px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.about-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-content h1 {
-    font-size: 3rem;
-    margin-bottom: 30px;
-}
-
-.about-content p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
 }
 
 .about-image {
+    max-width: 600px;
+    max-height: 60vh;
     width: 100%;
-    max-width: 100%;
     height: auto;
-    display: block;
+    object-fit: contain;
+    margin-bottom: 40px;
 }
+
+.about-text {
+    font-family: 'Salted', cursive;
+    font-size: 2rem;
+    color: #333;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.6;
+    min-height: 80px;
+}
+
+.about-text::after {
+    content: '|';
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
