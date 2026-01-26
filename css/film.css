@@ -1,166 +1,166 @@
 /* Overriding main.css to have different nav bar function */
 .navbar-film {
-    position: absolute;
+  position: absolute;
 }
 
 .navbar-film .nav-logo a,
 .navbar-film .nav-link {
-    color: #000;
+  color: #000;
 }
 
 .navbar-film .nav-link:hover {
-    color: #666;
+  color: #666;
 }
 
 .film-container {
-    padding: 100px 40px 40px;
-    max-width: 1400px;
-    margin: 0 auto;
+  padding: 100px 40px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .film-section {
-    display: flex;
-    gap: 40px;
-    margin-bottom: 80px;
-    align-items: center;
+  display: flex;
+  gap: 40px;
+  margin-bottom: 80px;
+  align-items: center;
 }
 
 .film-section-reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .film-video {
-    flex: 2;
+  flex: 2;
 }
 
 .film-video iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: none;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
 }
 
 .film-text {
-    flex: 1;
+  flex: 1;
 }
 
 .film-text h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
 .film-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
 }
 
 .script-link {
-    display: inline-block;
-    margin-top: 15px;
-    color: #333;
-    text-decoration: none;
-    font-size: 1rem;
-    border-bottom: 1px solid #333;
+  display: inline-block;
+  margin-top: 15px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 1px solid #333;
 }
 
 .script-link:hover {
-    color: #666;
+  color: #666;
 }
 
 .audio-section {
-    margin-bottom: 80px;
+  margin-bottom: 80px;
 }
 
 .audio-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .audio-player {
-    width: 100%;
+  width: 100%;
 }
 
 .audio-player audio {
-    width: 100%;
+  width: 100%;
 }
 
 .images-section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 .image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .image-grid img {
-    width: 100%;
-    height: auto;
-    display: block;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .image-grid img:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
 }
 
 .lightbox.active {
-    display: flex;
+  display: flex;
 }
 
 .lightbox-image {
-    max-width: 90%;
-    max-height: 90vh;
-    object-fit: contain;
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
 }
 
 .lightbox-close {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-    z-index: 2001;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 2001;
 }
 
 .lightbox-close:hover {
-    color: #ccc;
+  color: #ccc;
 }
 
 @media (max-width: 768px) {
-    .film-section,
-    .film-section-reverse {
-        flex-direction: column;
-    }
-    
-    .image-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .film-section,
+  .film-section-reverse {
+    flex-direction: column;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .collections-title {
-    font-family: 'Salted', cursive;
-    font-size: 2 rem;
-    text-align: center;
-    margin-bottom: 60px;
-    color: #333;
+  font-family: "Salted", cursive;
+  font-size: 2 rem;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #333;
 }
