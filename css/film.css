@@ -1,9 +1,6 @@
+/* Overriding main.css to have different nav bar function */
 .navbar-film {
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: absolute;
 }
 
 .navbar-film .nav-logo a,
@@ -15,13 +12,9 @@
     color: #666;
 }
 
-.navbar-film .nav-button img {
-    filter: none;
-}
-
 .film-container {
     padding: 100px 40px 40px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -61,6 +54,19 @@
     color: #666;
 }
 
+.script-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.script-link:hover {
+    color: #666;
+}
+
 .audio-section {
     margin-bottom: 80px;
 }
@@ -85,39 +91,22 @@
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .image-grid img {
     width: 100%;
     height: auto;
     display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .film-section,
-    .film-section-reverse {
-        flex-direction: column;
-    }
-    
-    .image-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.script-link {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #333;
-    border-bottom: 1px solid #333;
-    transition: color 0.3s ease;
-}
-
-.script-link:hover {
-    color: #666;
-    border-bottom-color: #666;
+.image-grid img:hover {
+    transform: scale(1.02);
 }
 
 .lightbox {
@@ -157,11 +146,21 @@
     color: #ccc;
 }
 
-.image-grid img {
-    cursor: pointer;
-    transition: transform 0.3s ease;
+@media (max-width: 768px) {
+    .film-section,
+    .film-section-reverse {
+        flex-direction: column;
+    }
+    
+    .image-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-.image-grid img:hover {
-    transform: scale(1.02);
+.collections-title {
+    font-family: 'Salted', cursive;
+    font-size: 2 rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #333;
 }
