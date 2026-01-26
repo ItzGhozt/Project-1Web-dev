@@ -97,10 +97,41 @@ function initTypingAnimation() {
     }
 }
 
+function initLightbox() {
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImage = document.querySelector('.lightbox-image');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const imageGridImages = document.querySelectorAll('.image-grid img');
+    const masonryImages = document.querySelectorAll('.masonry-item img');
+    
+    if (!lightbox || !lightboxImage || !lightboxClose) return;
+    
+    const allImages = [...imageGridImages, ...masonryImages];
+    
+    allImages.forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+            lightbox.classList.add('active');
+        });
+    });
+    
+    lightboxClose.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+    
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
+}
+
 function init() {
     console.log('Portfolio initialized');
     initPageIndicators();
     initTypingAnimation();
+    initLightbox();
 }
 
 document.addEventListener('DOMContentLoaded', init);
