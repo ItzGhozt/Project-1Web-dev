@@ -13,7 +13,7 @@ https://itzghozt.github.io/Project-1Web-dev/index.html
 https://drive.google.com/file/d/158eH8Y5c8VIoZbTz66dHN8VSRJuJbhZj/view?usp=sharing
 
 ## Design Document 
-
+https://drive.google.com/file/d/1M_eJaO-rY8TfM_-0egM24SH5ClCDKyTL/view?usp=sharing
 
 ## Build Instructions
 
@@ -73,9 +73,9 @@ Acknowledgments
 Used Claude extensively as a learning tool and development assistant throughout the project.
 
 **Example Prompts:**
-1. "Help me create the ai film.html page - give me a layout with video embeds and text sections"
-2. "Show me how to implement a lightbox modal for image previews using vanilla JavaScript"
-3. "I need ideas for keeping everything in vanilla JS without external libraries"
+1. "Help me create the ai film.html page - using this example layout please recreate it for the page"
+2. "Show me how to implement a lightbox modal and give resources for image previews using vanilla JavaScript with no code"
+3. "Can you give me some ideas on why my navigation bar is scrolling witht the page and not staying static"
 
 AI-generated code was:
 - Manually reviewed for correctness and best practices
@@ -96,4 +96,5 @@ CS 5610 - Web Development
 Spring 2026
 Class Link
 https://johnguerra.co/classes/webDevelopment_online_fall_2025/index.html
+
 
