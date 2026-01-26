@@ -28,7 +28,8 @@ https://drive.google.com/file/d/158eH8Y5c8VIoZbTz66dHN8VSRJuJbhZj/view?usp=shari
 - Check code: `npx eslint .`
 
 ## Project Structure
-    project1/
+```
+project1/
 ├── index.html              # Homepage with video hero and about section
 ├── collections.html        # Photo gallery with masonry grid
 ├── film.html              # Film projects showcase (AI-generated page)
@@ -47,13 +48,41 @@ https://drive.google.com/file/d/158eH8Y5c8VIoZbTz66dHN8VSRJuJbhZj/view?usp=shari
 ├── package-lock.json     # Dependency lock file
 ├── eslint.config.mjs     # ESLint configuration
 └── README.md             # This file
-
+```
 ## Technologies Used 
 - HTML5 (semantic markup)
 - CSS3 (Flexbox, CSS Grid, CSS Columns, Keyframe animations)
 - JavaScript ES6+ (modules, Intersection Observer API, event listeners)
 - Google Fonts (Salted font)
 
+## Acknowledgments 
+Acknowledgments
+- Northeastern University CS 5610 course materials
+- Google Fonts for Salted typeface
+- W3C for validation tools
+- Claude AI for development assistance
+
+## Use of Generative AI 
+**Claude by Anthropic**
+- **Model:** Claude Sonnet 4.5
+
+## Tool Used
+**Claude by Anthropic** (Sonnet 4.5, claude.ai, January 2026)
+
+### How It Was Used
+Used Claude extensively as a learning tool and development assistant throughout the project.
+
+**Example Prompts:**
+1. "Help me create the ai film.html page - give me a layout with video embeds and text sections"
+2. "Show me how to implement a lightbox modal for image previews using vanilla JavaScript"
+3. "I need ideas for keeping everything in vanilla JS without external libraries"
+
+AI-generated code was:
+- Manually reviewed for correctness and best practices
+- Tested across different browsers
+- Validated with W3C validator
+- Checked with ESLint and formatted with Prettier
+- Modified to fit project requirements and personal aesthetic
 
 ## License
 MIT License - see LICENSE file
@@ -68,22 +97,3 @@ Spring 2026
 Class Link
 https://johnguerra.co/classes/webDevelopment_online_fall_2025/index.html
 
-## Acknowledgments 
-Acknowledgments
-- Northeastern University CS 5610 course materials
-- Google Fonts for Salted typeface
-- W3C for validation tools
-- Claude AI for development assistance
-
-## Use of Generative AI 
-**Claude by Anthropic**
-- **Model:** Claude Sonnet 4.5
-- **Interface:** claude.ai (web interface)
-- **Version/Date:** January 2026
-  
-AI-generated code was:
-- Manually reviewed for correctness and best practices
-- Tested across different browsers
-- Validated with W3C validator
-- Checked with ESLint and formatted with Prettier
-- Modified to fit project requirements and personal aesthetic
