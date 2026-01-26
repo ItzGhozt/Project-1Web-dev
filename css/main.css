@@ -21,7 +21,6 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
@@ -32,9 +31,10 @@ body {
 .nav-logo a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 1px;
+    transition: color 0.5s ease;
 }
 
 .nav-links {
@@ -47,7 +47,7 @@ body {
     text-decoration: none;
     color: white;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 .nav-link:hover {
@@ -73,7 +73,7 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(0) invert(1);
+    transition: filter 0.5s ease;
 }
 
 .hero-video-section {
@@ -130,4 +130,54 @@ body {
     }
 }
 
+.page-indicators {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
+.page-indicators.show {
+    opacity: 1;
+}
+
+.page-indicator {
+    width: 3px;
+    height: 40px;
+    background-color: rgba(128, 128, 128, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-indicator.active {
+    width: 4px;
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.page-indicator:hover {
+    background-color: rgba(128, 128, 128, 0.6);
+}
+
+.navbar.dark-text .nav-logo a,
+.navbar.dark-text .nav-link {
+    color: #000;
+}
+
+.navbar.dark-text .nav-button img {
+    filter: none;
+}
+
+.instagram-logo {
+    transition: transform 0.3s ease;
+    transform: scale(1.3);
+}
+
+.navbar.dark-text .instagram-logo {
+    transform: scale(1);
+}
