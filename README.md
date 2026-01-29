@@ -55,6 +55,13 @@ project1/
 - JavaScript ES6+ (modules, Intersection Observer API, event listeners)
 - Google Fonts (Salted font)
 
+## Creative Addition 
+Typing animation 
+- A char by char typing effect on the home page
+- Triggered by scroll
+- Blinking cursor efefct
+- Built with custom JavaScript
+  
 ## Acknowledgments 
 Acknowledgments
 - Northeastern University CS 5610 course materials
@@ -96,5 +103,6 @@ CS 5610 - Web Development
 Spring 2026
 Class Link
 https://johnguerra.co/classes/webDevelopment_online_fall_2025/index.html
+
 
 
