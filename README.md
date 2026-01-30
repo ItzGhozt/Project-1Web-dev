@@ -104,5 +104,35 @@ Spring 2026
 Class Link
 https://johnguerra.co/classes/webDevelopment_online_fall_2025/index.html
 
+## Peer Review Comments
 
+The README is clear, well structured, and provides all the important information needed to understand the project. The documentation is strong, and the demo video is informative and gives a good overview of the application.
+
+The repository contains both ai-page.html and film.html. It appears that ai-page.html may be an unused placeholder file. Removing it or clarifying its purpose would improve repository organization and reduce potential confusion.
+
+The repository also includes an about.html file that does not appear to be part of the deployed website. If the file is no longer being used, removing it could help keep the repository clean and maintain a more streamlined project structure.
+
+Index.html
+
+The homepage is structured well with semantic HTML, clear class naming, and the required meta tags (author, description, favicon). The navigation links and images are configured properly, and the JavaScript is loaded using type="module", which satisfies the ES6 modules requirement.
+
+film.html (AI Page)
+
+The AI-generated film page is well organized and uses semantic sections for videos, audio, and images. Meta tags, CSS organization, and ES6 module loading are implemented correctly. The inclusion of lightbox markup suggests thoughtful integration with custom JavaScript functionality.
+
+collections.html
+
+The collections page is consistent with the rest of the site in terms of structure and styling. The masonry gallery layout uses clear class names, and all images include alt attributes. The lightbox markup is also present, supporting the interactive image experience.
+
+CSS Files
+
+The CSS is organized effectively with separate stylesheets for different pages and a consistent layout approach using flexbox, grid, and responsive media queries. The lightbox styling and gallery layouts are implemented clearly, and there is good use of classes without relying on !important.
+
+JavaScript (main.js)
+
+The JavaScript file demonstrates clear, original functionality beyond five lines and aligns well with the project features. It implements scroll-based page indicators with smooth navigation, dynamically updates navbar styling, includes a scroll-triggered typing animation using IntersectionObserver, and supports a reusable lightbox for images across multiple pages. The code is well structured with separate initialization functions and runs cleanly on DOMContentLoaded.
+
+Project Organization
+
+The repository is generally well organized with separate folders for CSS, JavaScript, and media files. As a small improvement, both the .mov video file and the audio file are currently stored inside the images folder. Creating dedicated directories for audio and video assets could further improve organization and make the project easier to maintain as it grows.
 
