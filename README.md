@@ -105,4 +105,7 @@ Class Link
 https://johnguerra.co/classes/webDevelopment_online_fall_2025/index.html
 
 
+## Peer review comment
+The README is clear, well structured, and provides all the important information needed to understand the project. The documentation is good, and the demo video is informative and gives a good overview of the application.
+
 
