@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "JMH Typewriter";
+  src: url("JMH Typewriter-Thin.ttf") format("truetype");
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  column-count: unset;
+}
+
+.collection-grid .masonry-item {
+  break-inside: unset;
+  margin-bottom: 0;
+}
+
+.collection-grid .masonry-item:hover img {
+  filter: none !important;
+}
+
+.collection-grid .masonry-item:hover {
+  transform: none !important;
+}
+
+.collection-grid .masonry-overlay {
+  display: none !important;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #999;
+}
+
+.collection-description {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: -40px;
+  margin-bottom: 48px;
+  font-family: "JMH Typewriter", serif;
+}
