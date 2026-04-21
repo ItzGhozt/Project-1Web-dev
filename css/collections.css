@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "JMH Typewriter";
+  src: url("JMH Typewriter-Thin.ttf") format("truetype");
+}
+
 /* Overriding main.css to have different nav bar function */
 .navbar-collections {
   position: absolute;
@@ -27,6 +32,8 @@
   break-inside: avoid;
   margin-bottom: 20px;
   background-color: white;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s ease;
 }
 
@@ -39,6 +46,45 @@
   height: auto;
   display: block;
   cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.masonry-item:hover img {
+  filter: grayscale(100%) brightness(0.5);
+}
+
+.masonry-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.masonry-item:hover .masonry-overlay {
+  opacity: 1;
+}
+
+.masonry-title {
+  color: #fff;
+  font-family: "Salted", cursive;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 0 16px;
+  margin: 0 0 8px;
+}
+
+.masonry-description {
+  color: #e0e0e0;
+  font-family: "JMH Typewriter", serif;
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0;
+  line-height: 1.4;
 }
 
 @media (max-width: 1024px) {

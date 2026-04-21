@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Isabel Yeow" />
-    <meta name="description" content="Collections - Photography Portfolio" />
     <link rel="icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,9 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Salted&display=swap"
       rel="stylesheet"
     />
-    <title>Collections - Isabel Yeow</title>
+    <title>Collection - Isabel Yeow</title>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/collections.css" />
+    <link rel="stylesheet" href="css/collection.css" />
   </head>
   <body>
     <nav class="navbar navbar-collections">
@@ -37,10 +37,21 @@
     </nav>
 
     <main class="collections-container">
-      <h1 class="collections-title">a collection of my work</h1>
-      <div class="masonry-grid"></div>
+      <a href="collections.html" class="back-link">&larr; Collections</a>
+      <h1 class="collections-title collection-title"></h1>
+      <p class="collection-description"></p>
+      <div class="masonry-grid collection-grid"></div>
     </main>
 
-    <script type="module" src="js/collections-page.js"></script>
+    <div class="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img
+        class="lightbox-image"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        alt="Lightbox image"
+      />
+    </div>
+
+    <script type="module" src="js/collection-page.js"></script>
   </body>
 </html>
