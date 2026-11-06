@@ -39,9 +39,32 @@
     </header>
 
     <section class="hero">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="images/portfolio_video.mov" type="video/mp4" />
-      </video>
+      <video
+        class="hero-video"
+        id="hero-video"
+        poster="images/web/hero-poster.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+      <script>
+        // Pick the lightest video that fits this screen (before it downloads).
+        (function () {
+          var v = document.getElementById("hero-video");
+          var file = "portfolio_video.mov";
+          if (
+            matchMedia("(max-width: 820px) and (orientation: portrait)").matches
+          )
+            file = "portfolio_video_portrait.mp4";
+          else if (matchMedia("(max-width: 1000px)").matches)
+            file = "portfolio_video_small.mp4";
+          var s = document.createElement("source");
+          s.src = "images/" + file;
+          s.type = "video/mp4";
+          v.appendChild(s);
+        })();
+      </script>
       <div class="hero-foot">
         <div class="hero-caption">
           <span class="serif">Isabel Yeow</span>
