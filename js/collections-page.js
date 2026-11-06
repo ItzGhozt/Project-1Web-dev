@@ -1,7 +1,6 @@
 import { collections } from "./collections-data.js";
 
-const encodePath = (p) =>
-  p.split("/").map(encodeURIComponent).join("/");
+const encodePath = (p) => p.split("/").map(encodeURIComponent).join("/");
 
 const grid = document.querySelector(".masonry-grid");
 
