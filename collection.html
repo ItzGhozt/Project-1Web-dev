@@ -2,55 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta name="author" content="Isabel Yeow" />
+    <meta
+      name="description"
+      content="A photography collection by Isabel Yeow."
+    />
     <link rel="icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Salted&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Gelasio:ital,wght@1,400&display=swap"
       rel="stylesheet"
     />
-    <title>Collection - Isabel Yeow</title>
+    <title>Collection — Isabel Yeow</title>
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/collections.css" />
-    <link rel="stylesheet" href="css/collection.css" />
   </head>
   <body>
-    <nav class="navbar navbar-collections">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <a href="index.html">Isabel Yeow</a>
+    <header class="site-nav">
+      <a class="brand" href="index.html">Isabel Yeow</a>
+      <nav class="menu">
+        <a href="index.html">Overview</a>
+        <a href="collections.html" aria-current="page">Collections</a>
+        <a href="film.html">Film</a>
+      </nav>
+      <a class="info" href="about.html">Info</a>
+    </header>
+
+    <main class="page">
+      <div class="collection-head">
+        <div>
+          <h1 class="page-title" id="title"></h1>
+          <p class="caption" id="desc"></p>
         </div>
-        <div class="nav-links">
-          <a href="film.html" class="nav-link">Film</a>
-          <a href="collections.html" class="nav-link">Collections</a>
-          <a
-            href="https://www.instagram.com/izzeezdigeezs/"
-            target="_blank"
-            class="nav-button"
-          >
-            <img src="images/instagram_logoB.png" alt="Instagram" />
-          </a>
-        </div>
+        <a class="back" href="collections.html">&larr; All collections</a>
       </div>
-    </nav>
-
-    <main class="collections-container">
-      <a href="collections.html" class="back-link">&larr; Collections</a>
-      <h1 class="collections-title collection-title"></h1>
-      <p class="collection-description"></p>
-      <div class="masonry-grid collection-grid"></div>
+      <div class="photo-grid" id="grid"></div>
     </main>
-
-    <div class="lightbox">
-      <span class="lightbox-close">&times;</span>
-      <img
-        class="lightbox-image"
-        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        alt="Lightbox image"
-      />
-    </div>
+    <footer class="footer">
+      <span>&copy; Isabel Yeow</span>
+      <a
+        href="https://www.instagram.com/izzeezdigeezs/"
+        target="_blank"
+        rel="noopener"
+        >Instagram</a
+      >
+    </footer>
 
     <script type="module" src="js/collection-page.js"></script>
   </body>

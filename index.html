@@ -2,63 +2,106 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <meta name="author" content="Isabel Yeow" />
-    <meta name="description" content="Photography and Videography Portfolio" />
+    <meta
+      name="description"
+      content="Photography and videography portfolio of Isabel Yeow."
+    />
     <link rel="icon" href="images/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Salted&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Gelasio:ital,wght@1,400&display=swap"
       rel="stylesheet"
     />
-    <title>Isabel Yeow - Portfolio</title>
+    <title>Isabel Yeow — Photographer & Filmmaker</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <a href="index.html">Isabel Yeow</a>
+  <body class="home">
+    <div class="intro" id="intro">
+      <p class="intro-text">
+        Isabel Yeow<span class="dash">—</span
+        ><span class="serif">Photographer &amp; Filmmaker</span>
+      </p>
+    </div>
+    <header class="site-nav">
+      <a class="brand" href="index.html">Isabel Yeow</a>
+      <nav class="menu">
+        <a href="index.html" aria-current="page">Overview</a>
+        <a href="collections.html">Collections</a>
+        <a href="film.html">Film</a>
+      </nav>
+      <a class="info" href="about.html">Info</a>
+    </header>
+
+    <section class="hero">
+      <video
+        class="hero-video"
+        id="hero-video"
+        poster="images/web/hero-poster.jpg"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+      <script>
+        // Pick the lightest video that fits this screen (before it downloads).
+        (function () {
+          var v = document.getElementById("hero-video");
+          var file = "portfolio_video.mov";
+          if (
+            matchMedia("(max-width: 820px) and (orientation: portrait)").matches
+          )
+            file = "portfolio_video_portrait.mp4";
+          else if (matchMedia("(max-width: 1000px)").matches)
+            file = "portfolio_video_small.mp4";
+          var s = document.createElement("source");
+          s.src = "images/" + file;
+          s.type = "video/mp4";
+          v.appendChild(s);
+        })();
+      </script>
+      <div class="hero-foot">
+        <div class="hero-caption">
+          <span class="serif">Isabel Yeow</span>
+          <a href="collections.html">View Collections</a>
         </div>
-        <div class="nav-links">
-          <a href="film.html" class="nav-link">Film</a>
-          <a href="collections.html" class="nav-link">Collections</a>
-          <a
-            href="https://www.instagram.com/izzeezdigeezs/"
-            target="_blank"
-            class="nav-button"
-          >
-            <img
-              src="images/instagram_logoW.png"
-              alt="Instagram"
-              class="instagram-logo"
-            />
-          </a>
-        </div>
+        <span class="hero-scroll">Scroll</span>
       </div>
-    </nav>
+    </section>
 
-    <div class="page-indicators">
-      <div class="page-indicator active" data-section="video"></div>
-      <div class="page-indicator" data-section="about"></div>
-    </div>
-
-    <div class="hero-video-section">
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="images/portfolio_video.mov" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-
-    <div class="about-section">
-      <img src="images/isabel.JPG" alt="Isabel Yeow" class="about-image" />
-      <div class="about-text">
-        Hi I'm Isabel, I'm a third year at Northeastern University and a
-        videographer/photographer
+    <section class="about">
+      <figure class="about-figure">
+        <img
+          class="about-image"
+          src="images/web/home-portrait.jpg"
+          alt="Isabel Yeow"
+          loading="lazy"
+        />
+      </figure>
+      <div class="about-body">
+        <p class="about-text">
+          Hi, I&rsquo;m Isabel &mdash; a fourth year at Northeastern University
+          and a
+          <em>videographer &amp; photographer</em>.
+        </p>
+        <a class="link-serif" href="collections.html">View all collections</a>
       </div>
-    </div>
+    </section>
+    <footer class="footer">
+      <span>&copy; Isabel Yeow</span>
+      <a
+        href="https://www.instagram.com/izzeezdigeezs/"
+        target="_blank"
+        rel="noopener"
+        >Instagram</a
+      >
+    </footer>
 
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/site.js"></script>
   </body>
 </html>
