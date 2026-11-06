@@ -331,11 +331,11 @@ a {
   color: var(--dim);
 }
 
-.cats:hover a {
+.cats.has-active a {
   opacity: 0.25;
 }
 
-.cats a:hover {
+.cats a.is-active {
   opacity: 1;
   font-family: var(--serif);
   font-style: italic;
