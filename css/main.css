@@ -349,14 +349,27 @@ a {
   z-index: 5;
   width: min(34vw, 520px);
   aspect-ratio: 3 / 2;
-  object-fit: cover;
   transform: translateY(-50%);
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
+  transition: opacity 0.25s;
 }
 
 .cat-preview.show {
+  opacity: 1;
+}
+
+.cat-preview img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.cat-preview img.active {
   opacity: 1;
 }
 
