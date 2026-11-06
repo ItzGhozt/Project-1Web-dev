@@ -2,26 +2,24 @@ import { collections } from "./collections-data.js";
 
 const encodePath = (p) => p.split("/").map(encodeURIComponent).join("/");
 
-const grid = document.querySelector(".masonry-grid");
+const list = document.getElementById("cats");
+const preview = document.getElementById("preview");
 
-if (collections.length === 0) {
-  grid.innerHTML =
-    '<p style="text-align:center;color:#999;font-family:sans-serif;">No collections yet.</p>';
-} else {
-  collections.forEach(({ id, title, description, cover }) => {
-    const item = document.createElement("div");
-    item.className = "masonry-item";
-    item.style.cursor = "pointer";
-    item.innerHTML = `
-      <img src="${encodePath(cover)}" alt="${title}" />
-      <div class="masonry-overlay">
-        <p class="masonry-title">${title}</p>
-        <p class="masonry-description">${description}</p>
-      </div>
-    `;
-    item.addEventListener("click", () => {
-      window.location.href = `collection.html?id=${id}`;
-    });
-    grid.appendChild(item);
+collections.forEach(({ id, title, cover, photos }) => {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.href = `collection.html?id=${encodeURIComponent(id)}`;
+  a.textContent = title;
+  const count = document.createElement("sup");
+  count.textContent = String(photos.length);
+  a.appendChild(count);
+
+  a.addEventListener("mouseenter", () => {
+    preview.src = encodePath(cover);
+    preview.classList.add("show");
   });
-}
+  a.addEventListener("mouseleave", () => preview.classList.remove("show"));
+
+  li.appendChild(a);
+  list.appendChild(li);
+});
