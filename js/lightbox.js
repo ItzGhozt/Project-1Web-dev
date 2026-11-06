@@ -21,7 +21,10 @@ export function initLightbox(container) {
     img.alt = imgs[i].alt;
     count.textContent = `${i + 1} / ${imgs.length}`;
   };
-  const close = () => lb.classList.remove("open");
+  const close = () => {
+    lb.classList.remove("open");
+    document.body.style.overflow = "";
+  };
 
   container.addEventListener("click", (e) => {
     const target = e.target.closest("img");
@@ -29,9 +32,33 @@ export function initLightbox(container) {
     imgs = [...container.querySelectorAll("img")];
     show(imgs.indexOf(target));
     lb.classList.add("open");
+    document.body.style.overflow = "hidden";
+  });
+
+  // Swipe left/right on touch screens
+  let startX = null;
+  lb.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+    },
+    { passive: true },
+  );
+  lb.addEventListener("touchend", (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    startX = null;
+    if (Math.abs(dx) > 50) {
+      show(dx < 0 ? i + 1 : i - 1);
+      lb.dataset.swiped = "1";
+    }
   });
 
   lb.addEventListener("click", (e) => {
+    if (lb.dataset.swiped) {
+      delete lb.dataset.swiped;
+      return;
+    }
     if (e.target.closest(".lb-prev")) show(i - 1);
     else if (e.target.closest(".lb-next")) show(i + 1);
     else if (e.target !== img) close();
