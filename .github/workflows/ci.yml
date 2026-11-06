@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: ESLint
+        run: npx eslint .
+      - name: Prettier
+        run: npx prettier --check .
+      - name: Images exist and aren't LFS pointers
+        run: node scripts/check-assets.mjs

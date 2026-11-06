@@ -10,9 +10,12 @@ export const collections = [
     id: "malcolm-todd",
     title: "Malcolm Todd",
     description: "Malcolm Todd @ CUP Springfest, February 2026.",
-    cover: "images/web/collections/finished malcom todd/Malcolm Todd @CUP Springfest 2-28-26 by Isabel Yeow - 1.jpg",
-    photos: Array.from({ length: 29 }, (_, i) =>
-      `images/web/collections/finished malcom todd/Malcolm Todd @CUP Springfest 2-28-26 by Isabel Yeow - ${i + 1}.jpg`
+    cover:
+      "images/web/collections/finished malcom todd/Malcolm Todd @CUP Springfest 2-28-26 by Isabel Yeow - 1.jpg",
+    photos: Array.from(
+      { length: 29 },
+      (_, i) =>
+        `images/web/collections/finished malcom todd/Malcolm Todd @CUP Springfest 2-28-26 by Isabel Yeow - ${i + 1}.jpg`,
     ),
   },
   {
@@ -55,9 +58,12 @@ export const collections = [
     id: "colored-prof",
     title: "Whats on your mind",
     description: "A collection of Art",
-    cover: "images/web/collections/colored prof/Whats on your mind -  Isabel Yeow-1.jpg",
-    photos: Array.from({ length: 17 }, (_, i) =>
-      `images/web/collections/colored prof/Whats on your mind -  Isabel Yeow-${i + 1}.jpg`
+    cover:
+      "images/web/collections/colored prof/Whats on your mind -  Isabel Yeow-1.jpg",
+    photos: Array.from(
+      { length: 17 },
+      (_, i) =>
+        `images/web/collections/colored prof/Whats on your mind -  Isabel Yeow-${i + 1}.jpg`,
     ),
   },
   {
@@ -125,18 +131,24 @@ export const collections = [
     id: "beno",
     title: "Beno",
     description: "Beno @ CUP Springfest, February 2026.",
-    cover: "images/web/collections/finished beno/Beno @CUP Springfest 2-28-26 by Isabel Yeow - 1.jpg",
-    photos: Array.from({ length: 28 }, (_, i) =>
-      `images/web/collections/finished beno/Beno @CUP Springfest 2-28-26 by Isabel Yeow - ${i + 1}.jpg`
+    cover:
+      "images/web/collections/finished beno/Beno @CUP Springfest 2-28-26 by Isabel Yeow - 1.jpg",
+    photos: Array.from(
+      { length: 28 },
+      (_, i) =>
+        `images/web/collections/finished beno/Beno @CUP Springfest 2-28-26 by Isabel Yeow - ${i + 1}.jpg`,
     ),
   },
   {
     id: "cherry-crisis",
     title: "Cherry Crisis",
     description: "Cherry Crisis @ CUP Springfest, February 2026.",
-    cover: "images/web/collections/finished cherry crisis/Cherry Crisis @CUP Springfest 2-28-26 by Isabel Yeow - 1.jpg",
-    photos: Array.from({ length: 26 }, (_, i) =>
-      `images/web/collections/finished cherry crisis/Cherry Crisis @CUP Springfest 2-28-26 by Isabel Yeow - ${i + 1}.jpg`
+    cover:
+      "images/web/collections/finished cherry crisis/Cherry Crisis @CUP Springfest 2-28-26 by Isabel Yeow - 1.jpg",
+    photos: Array.from(
+      { length: 26 },
+      (_, i) =>
+        `images/web/collections/finished cherry crisis/Cherry Crisis @CUP Springfest 2-28-26 by Isabel Yeow - ${i + 1}.jpg`,
     ),
   },
   {
@@ -184,18 +196,26 @@ export const collections = [
     id: "hiya-riya",
     title: "Hiya Riya",
     description: "Hiya Riya @ MSSA.",
-    cover: "images/web/collections/hiya-riya/Hiya Riya MSSA -  Isabel Yeow-1.jpg",
-    photos: Array.from({ length: 39 }, (_, i) =>
-      `images/web/collections/hiya-riya/Hiya Riya MSSA -  Isabel Yeow-${i + 1}.jpg`
+    cover:
+      "images/web/collections/hiya-riya/Hiya Riya MSSA -  Isabel Yeow-1.jpg",
+    photos: Array.from(
+      { length: 39 },
+      (_, i) =>
+        `images/web/collections/hiya-riya/Hiya Riya MSSA -  Isabel Yeow-${i + 1}.jpg`,
     ),
   },
   {
     id: "sing-and-serve",
     title: "Sing & Serve",
     description: "Sing & Serve @ RSA.",
-    cover: "images/web/collections/Sing & Serve/Sing & Serve RSA - Isabel Yeow-1.jpg",
-    photos: Array.from({ length: 21 }, (_, i) =>
-      `images/web/collections/Sing & Serve/Sing & Serve RSA - Isabel Yeow-${i + 1}.jpg`
-    ),
+    cover:
+      "images/web/collections/Sing & Serve/Sing & Serve RSA - Isabel Yeow-1.jpg",
+    // photo 16 doesn't exist in the folder, so skip it
+    photos: Array.from({ length: 21 }, (_, i) => i + 1)
+      .filter((n) => n !== 16)
+      .map(
+        (n) =>
+          `images/web/collections/Sing & Serve/Sing & Serve RSA - Isabel Yeow-${n}.jpg`,
+      ),
   },
 ];
