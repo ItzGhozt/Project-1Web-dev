@@ -669,6 +669,21 @@ a {
     gap: 16px;
   }
 
+  .site-nav {
+    mix-blend-mode: normal;
+    color: #fff;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.55);
+  }
+
+  .site-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 -28px 0;
+    z-index: -1;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), transparent);
+    pointer-events: none;
+  }
+
   .site-nav .brand {
     margin-right: auto;
   }
