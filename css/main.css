@@ -263,6 +263,58 @@ a {
   color: var(--dim);
 }
 
+/* ───────── Home: text colour follows the video behind it ───────── */
+
+/* hero-tone.js sets data-tone on [data-adapt] elements; the colour eases between white and near-black. */
+.home [data-adapt] {
+  --tone-fg: #fff;
+  --tone-dim: rgba(255, 255, 255, 0.72);
+  transition:
+    color 0.7s ease,
+    --tone-fg 0.7s ease;
+}
+
+.home [data-adapt][data-tone="dark"] {
+  --tone-fg: #101010;
+  --tone-dim: rgba(16, 16, 16, 0.7);
+}
+
+.hero-foot [data-adapt] {
+  color: var(--tone-fg);
+}
+
+.hero-foot .hero-scroll {
+  opacity: 1;
+}
+
+@media (min-width: 721px) {
+  /* on larger screens the nav used a difference blend, which greyed the links out over a pale sky */
+  .home .site-nav {
+    mix-blend-mode: normal;
+  }
+
+  .home .site-nav [data-adapt] {
+    color: var(--tone-fg);
+  }
+
+  .home .site-nav .menu a {
+    color: var(--tone-dim);
+    transition: color 0.7s ease;
+  }
+
+  .home .site-nav .menu a[aria-current="page"],
+  .home .site-nav .menu a:hover {
+    color: var(--tone-fg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home [data-adapt],
+  .home .site-nav .menu a {
+    transition: none;
+  }
+}
+
 /* ───────── Page shell (inner pages) ───────── */
 
 .page {
